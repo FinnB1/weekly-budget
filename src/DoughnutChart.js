@@ -10,30 +10,29 @@ export default class DoughnutChart extends React.Component {
         super(props);
     }
 
-
+    setValue(key, val) {
+        this.setState({
+            [key]: val,
+        });
+    }
 
     render() {
         let data;
-        data = [
-                {
-                    value: 300,
-                    color:"#F7464A",
-                    highlight: "#FF5A5E",
-                    label: "Red"
-                },
-        {
-            value: 50,
-                color: "#46BFBD",
-            highlight: "#5AD3D1",
-            label: "Green"
-        },
-        {
-            value: 100,
-                color: "#FDB45C",
-            highlight: "#FFC870",
-            label: "Yellow"
-        }
-    ]
+        data = { datasets:[{
+            label: "£ per week",
+                data: [
+                    this.props.data.groceries,
+                    this.props.data.drinks,
+                    this.props.data.transport,
+                    5
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                ],
+            }],
+            labels:['Groceries', 'Drinks', 'Transport', "Other Costs"] }
         return (
             <div>
                 <Doughnut data={data} />
