@@ -11,11 +11,19 @@
 }
 
 .main-list {
-  min-width: 50vw;
+  min-width: 25vw;
+}
+
+.main-list-group{
+  min-height: 100vh;
 }
 
 .form-row {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.piechart-container {
+  min-width: 60vw;
 }
