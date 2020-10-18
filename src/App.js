@@ -39,7 +39,7 @@ export default class App extends React.Component {
                         Weekly Budget Calculator 💸
                     </ListGroup.Item>
                     <ListGroup.Item>
-                        <Row noGutters="true">
+                        <Row xs={1} lg={3} noGutters="true">
                             <Col>
                                 <Options handler={this.handler}/>
 
